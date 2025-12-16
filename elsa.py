@@ -68,6 +68,15 @@ def выполнить_список(list_index, timestamp=None):
         # Ловим любые другие исключения и записываем в изменения
         я['изменения'].append([-1, list_index, timestamp])
 
+def сообщение_системе(message, timestamp=None):
+    """API function for users to send messages to the system"""
+    # Устанавливаем timestamp, если он не передан
+    if timestamp is None:
+        timestamp = int(time.time() * 1000)  # текущее время в миллисекундах
+
+    # Добавляем сообщение в изменения в формате [0, message, timestamp]
+    я['изменения'].append([0, message, timestamp])
+
 я = {
     'данные': [["напечатать_привет", "напечатать_пока", "создать_список", "добавить_функцию_в_список", "выполнить_список"]],
     'контексты': [],
