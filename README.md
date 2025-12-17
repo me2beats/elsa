@@ -4,4 +4,8 @@ ELSA (Empirical Logic Synthesis Agent) is an experimental artificial intelligenc
 
 Current repository state: Initial prototype
 
+## Architectural Principles
+
+See our architectural principles in [MANIFESTO.md](MANIFESTO.md)
+
 For Russian translation, see [README_RU.md](README_RU.md)
